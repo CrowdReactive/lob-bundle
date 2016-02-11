@@ -1,6 +1,6 @@
 <?php
 
-namespace CrowdReactive\LobBundle\Tests\DependencyInjection;
+namespace CrowdReactive\LobBundle\tests\DependencyInjection;
 
 use CrowdReactive\LobBundle\DependencyInjection\CrowdReactiveLobExtension;
 use Lob\Lob;

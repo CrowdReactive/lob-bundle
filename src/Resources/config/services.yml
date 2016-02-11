@@ -1,0 +1,9 @@
+parameters:
+    lob.class: Lob\Lob
+
+services:
+    lob:
+        class: %lob.class%
+        arguments:
+            - %lob.api_key%
+            - %lob.version%

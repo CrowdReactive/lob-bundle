@@ -17,6 +17,7 @@
         }
     ],
     "require": {
+        "php": "^5.5|^7.0",
         "lob/lob-php": "~1.6",
         "symfony/framework-bundle": "^2.7|^3.0"
     },

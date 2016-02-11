@@ -50,7 +50,7 @@ class CrowdReactiveLobExtensionTest extends \PHPUnit_Framework_TestCase
             'lob' => [],
         ];
 
-        $this->expectException(InvalidConfigurationException::class);
+        $this->setExpectedException(InvalidConfigurationException::class);
 
         $this->extension->load($configs, $this->container);
     }

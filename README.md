@@ -12,51 +12,50 @@ Bundled at CrowdReactive, makers of [EventsTag](https://eventstag.com/).
 
 ## Usage
 
-1.  Install the bundle
-
-```
-composer require crowdreactive/lob-bundle
-```
+1.  Install the bundle:
+    ```
+    composer require crowdreactive/lob-bundle
+    ```
 
 2.  Add it to AppKernel
 
-```php
-class AppKernel {
-    public function registerBundles() {
-        $bundles = [
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            // ...
-            new CrowdReactive\LobBundle\CrowdReactiveLobBundle(),
-        ];
+    ```php
+    class AppKernel {
+        public function registerBundles() {
+            $bundles = [
+                new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+                // ...
+                new CrowdReactive\LobBundle\CrowdReactiveLobBundle(),
+            ];
+        }
     }
-}
-```
+    ```
 
 3.  Configuration
 
-```yml
-lob:
-    # Required
-    api_key: abc123
+    ```yml
+    lob:
+        # Required
+        api_key: abc123
 
-    # Optional
-    version: 1.5.0      # A specific version of the API
-```
+        # Optional
+        version: 1.5.0      # A specific version of the API
+    ```
 
 4.  Access the Lob service
 
-The `Lob\Lob` instance is named `lob` in the dependency container. Access it with:
+    The `Lob\Lob` instance is named `lob` in the dependency container. Access it with:
 
-```php
-$this->container->get('lob');
-```
+    ```php
+    $this->container->get('lob');
+    ```
 
-```yml
-my_postal_service:
-    class: My\PostalService
-    arguments:
-        -   "@lob"
-```
+    ```yml
+    my_postal_service:
+        class: My\PostalService
+        arguments:
+            -   "@lob"
+    ```
 
 ## Contributing
 

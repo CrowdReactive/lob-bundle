@@ -34,7 +34,7 @@ Bundled at CrowdReactive, makers of [EventsTag](https://eventstag.com/).
 3.  Configuration
 
     ```yml
-    lob:
+    crowd_reactive_lob:
         # Required
         api_key: abc123
 
@@ -44,17 +44,17 @@ Bundled at CrowdReactive, makers of [EventsTag](https://eventstag.com/).
 
 4.  Access the Lob service
 
-    The `Lob\Lob` instance is named `lob` in the dependency container. Access it with:
+    The `Lob\Lob` instance is named `crowd_reactive_lob.lob` in the dependency container. Access it with:
 
     ```php
-    $this->container->get('lob');
+    $this->container->get('crowd_reactive_lob.lob');
     ```
 
     ```yml
     my_postal_service:
         class: My\PostalService
         arguments:
-            -   "@lob"
+            -   "@crowd_reactive_lob.lob"
     ```
 
 ## Contributing

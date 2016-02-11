@@ -29,17 +29,17 @@ class CrowdReactiveLobExtensionTest extends \PHPUnit_Framework_TestCase
     public function testWithDefaults()
     {
         $configs = [
-            'lob' => [
+            'crowd_reactive_lob' => [
                 'api_key' => 'abc123',
             ],
         ];
 
         $this->extension->load($configs, $this->container);
 
-        $this->assertInstanceOf(Lob::class, $this->container->get('lob'));
+        $this->assertInstanceOf(Lob::class, $this->container->get('crowd_reactive_lob.lob'));
 
         /** @var Lob $lob */
-        $lob = $this->container->get('lob');
+        $lob = $this->container->get('crowd_reactive_lob.lob');
         $this->assertEquals('abc123', $lob->getApiKey());
         $this->assertNull($lob->getVersion());
     }
@@ -47,7 +47,7 @@ class CrowdReactiveLobExtensionTest extends \PHPUnit_Framework_TestCase
     public function testWithoutApiKey()
     {
         $configs = [
-            'lob' => [],
+            'crowd_reactive_lob' => [],
         ];
 
         $this->setExpectedException(InvalidConfigurationException::class);
@@ -58,7 +58,7 @@ class CrowdReactiveLobExtensionTest extends \PHPUnit_Framework_TestCase
     public function testWithVersion()
     {
         $configs = [
-            'lob' => [
+            'crowd_reactive_lob' => [
                 'api_key' => 'abc123',
                 'version' => '1.6.0',
             ],
@@ -67,7 +67,7 @@ class CrowdReactiveLobExtensionTest extends \PHPUnit_Framework_TestCase
         $this->extension->load($configs, $this->container);
 
         /** @var Lob $lob */
-        $lob = $this->container->get('lob');
+        $lob = $this->container->get('crowd_reactive_lob.lob');
         $this->assertEquals('1.6.0', $lob->getVersion());
     }
 }

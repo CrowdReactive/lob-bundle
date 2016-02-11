@@ -10,7 +10,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $root = $treeBuilder->root('lob', 'array');
+        $root = $treeBuilder->root('crowd_reactive_lob', 'array');
 
         $root
             ->children()

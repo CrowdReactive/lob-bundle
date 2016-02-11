@@ -1,10 +1,10 @@
 parameters:
-    lob.class: Lob\Lob
+    crowd_reactive_lob.lob.class: Lob\Lob
 
 services:
-    lob:
-        class: %lob.class%
+    crowd_reactive_lob.lob:
+        class: %crowd_reactive_lob.lob.class%
         arguments:
-            - %lob.api_key%
-            - %lob.version%
+            - %crowd_reactive_lob.api_key%
+            - %crowd_reactive_lob.version%
 

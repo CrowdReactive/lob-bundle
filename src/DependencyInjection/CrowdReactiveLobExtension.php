@@ -14,8 +14,8 @@ class CrowdReactiveLobExtension extends Extension
         $configuration = new Configuration();
         $lobConfig = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('lob.api_key', $lobConfig['api_key']);
-        $container->setParameter('lob.version', $lobConfig['version']);
+        $container->setParameter('crowd_reactive_lob.api_key', $lobConfig['api_key']);
+        $container->setParameter('crowd_reactive_lob.version', $lobConfig['version']);
 
         $yamlLoader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $yamlLoader->load('services.yml');
